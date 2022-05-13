@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test-backend": "wsl bash -c \"cd ~/tacpic_backend && rake run:main RACK_ENV=test\"; npx playwright test",
+    "backend-tests": "wsl bash -c \"cd ~/tacpic_backend && rake test:all RACK_ENV=test\"",
+    "test": "npx playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.19.1"
+    "@playwright/test": "^1.21"
   }
 }
